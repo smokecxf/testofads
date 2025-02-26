@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom left, #08121D, #0B1827, #245083);
+            text-align: center;
+            user-select: none;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between; /* Distribute space between text and image */
+            padding: 40px;
+            text-align: left; /* Align text to the left */
+        }
+
+
+        h2 {
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: white;
+            font-size: 32px; /* Increase font size to make it more prominent */
+            margin-bottom: 20px;
+        }
+        p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        /* Styling for the 'Let's Start' div */
+        .let-start {
+            background-color: #0B1827;
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-radius: 8px;
+            font-size: 22px;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: 2px solid white;
+        }
+        .let-start:hover {
+            background-color: #245083;
+            transform: scale(1.1);
+            transition: 0.2s;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .step:hover {
+            transform: scale(1.2);
+            transition: 0.2s;
+            background: #0B1827;
+            text-shadow: 10px black;
+        }
+        .step {
+            background-color: var(--background-color);
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .step h3 {
+            font-size: 24px;
+            color: #ffffff;
+        }
+        .step p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        header {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 10px;
+    flex-wrap: wrap; /* Ensure links stack on mobile */
+    border: 2px solid white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 4px;
+}
+
+
+        /* Media Queries for smaller screens */
+        @media screen and (max-width: 768px) {
+            section {
+                flex-direction: column; /* Stack the content for smaller screens */
+                align-items: center;
+            }
+
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .image-content {
+                max-width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /* Image content styling */
+        .image-content {
+            flex-basis: 40%; /* Take up 40% of the section width */
+            margin-left: 20px;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Styling for the 50x50px div in the top right corner */
+        .top-right-div {
+            position: absolute;
+            top: 10px;  /* 10px from the top */
+            right: 10px; /* 10px from the right */
+            width: 50px;
+            height: 50px;
+            background-color: #ff5733; /* Red color */
+            border-radius: 50%; /* Circular shape */
+            box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+            
+
+        }
+        .top-right-div .imgpro{
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Watch & Earn</h1>
+        <h4>Your Entertainment, Your Earnings</h4>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Home</a>
+        <a href="watchingads.html">Watching Ads</a>
+        <a href="withdraw.html">Withdraw</a>
+        <a href="Profile.html">Profile</a>
+    </nav>
+
+    <section>
+        <div class="text-content">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>Watch & Earn</strong>, your go-to platform where entertainment meets opportunity!</p>
+            <p>At <strong>Watch & Earn</strong>, we believe that everyone should have the chance to earn while enjoying their favorite content. Whether you're watching videos, engaging with ads, or completing simple tasks, you can start making money today—all while having fun.</p>
+            <p>Our platform is designed to make earning easy and accessible for everyone. You don't need any special skills or experience to get started—just a device and a desire to earn. Watch videos, play games, explore content, and start building your balance.</p>
+
+            <div class="let-start">
+                Let's Start
+            </div>
+
+            <h3>How It Works</h3>
+
+            <div class="steps">
+                <div class="step">
+                    <h3>Sign Up</h3>
+                    <p>Join our community of users eager to watch and earn.</p>
+                </div>
+                <div class="step">
+                    <h3>Watch Content</h3>
+                    <p>Browse through our library of engaging videos, ads, or entertainment.</p>
+                </div>
+                <div class="step">
+                    <h3>Earn Money</h3>
+                    <p>For every video you watch, you’ll earn rewards.</p>
+                </div>
+                <div class="step">
+                    <h3>Cash Out</h3>
+                    <p>Once you’ve accumulated enough points, you can redeem them for real money or gift cards.</p>
+                </div>
+            </div>
+            <br>
+            <p>Join us today, and start watching, enjoying, and earning—because we believe your time should be rewarded!</p>
+        </div>
+
+        <div class="image-content">
+            <img src="man.png" alt="About Us Image" />
+        </div>
+    </section>
+
+   <!-- The 50x50px div in the top right corner -->
+<div class="top-right-div" id="divpic">
+    <img id="profilePic" class="imgpro" src="https://via.placeholder.com/150" alt="Profile Picture">
+</div>
+
+<script>
+// Function to load profile data from localStorage
+function loadProfilePic() {
+    const storedProfile = localStorage.getItem('userProfile');
+    if (storedProfile) {
+        const profileData = JSON.parse(storedProfile);
+        document.getElementById("profilePic").src = profileData.profilePicture || 'https://via.placeholder.com/150';
+    }
+}
+
+// Call this function when the page loads
+window.onload = loadProfilePic;
+</script>
+
+</body>
+</html>

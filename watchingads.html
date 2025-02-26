@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Ads</title>
+    <link rel="stylesheet" href="watching.css">
+</head>
+<body>  
+     <header>
+            <h1>Watch Ads to Earn Rewards!</h1>
+            <h4>Your Entertainment, Your Earnings</h4>
+        </header>
+        <nav>
+            <a href="../main/dashboard.html">Home</a>
+            <a href="../ads/watchingads.html">Watching Ads</a>
+            <a href="../withdraw/withdraw.html">Withdraw</a>
+            <a href="../Profile/Profile.html">Profile</a>
+        </nav><br>
+        <br>
+    <div class="container">
+    
+     
+        <div class="ad-container">
+            <p>Ad Banner 1:</p>
+           
+        </div>
+
+        <div class="ad-container">
+            <p>Video Ad:</p>
+            <video controls class="ad-video">
+                
+            </video>
+        </div>
+
+        <div class="reward">
+
+            <button id="claimRewardBtn">Claim Reward</button>
+        </div>
+    </div>
+    <div class="top-right-div" id="divpic">
+        <img id="profilePic" class="imgpro" src="https://via.placeholder.com/150" alt="Profile Picture">
+    </div>
+    
+    <script>
+    // Function to load profile data from localStorage
+    function loadProfilePic() {
+        const storedProfile = localStorage.getItem('userProfile');
+        if (storedProfile) {
+            const profileData = JSON.parse(storedProfile);
+            document.getElementById("profilePic").src = profileData.profilePicture || 'https://via.placeholder.com/150';
+        }
+    }
+    
+    // Call this function when the page loads
+    window.onload = loadProfilePic;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

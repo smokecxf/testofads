@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw Page</title>
+    <link rel="stylesheet" href="withdraw.css">
+</head>
+<body>
+    <header>
+        <h1>Watch & Earn</h1>
+        <h4>Your Entertainment, Your Earnings</h4>
+    </header>
+    <nav>
+        <a href="dashboard.html">Home</a>
+        <a href="watchingads.html">Watching Ads</a>
+        <a href="withdraw.html">Withdraw</a>
+        <a href="Profile.html">Profile</a>
+    </nav>
+
+    <section class="withdraw-section">
+        <div class="withdraw-container">
+            <h2>Your Current Balance: <span id="currentBalance">0.00$</span></h2>
+            
+            <form id="withdrawForm">
+                <label for="withdrawAmount">Enter Amount to Withdraw:</label>
+                <input type="number" id="withdrawAmount" placeholder="Enter amount" min="1" required>
+
+                <button type="submit">Withdraw</button>
+            </form>
+
+            <div id="confirmationMessage" class="hidden">
+                <p id="confirmationText"></p>
+            </div>
+        </div>
+    </section>
+    <div class="top-right-div" id="divpic">
+        <img id="profilePic" class="imgpro" src="https://via.placeholder.com/150" alt="Profile Picture">
+    </div>
+    
+    <script>
+    // Function to load profile data from localStorage
+    function loadProfilePic() {
+        const storedProfile = localStorage.getItem('userProfile');
+        if (storedProfile) {
+            const profileData = JSON.parse(storedProfile);
+            document.getElementById("profilePic").src = profileData.profilePicture || 'https://via.placeholder.com/150';
+        }
+    }
+    
+    // Call this function when the page loads
+    window.onload = loadProfilePic;
+    </script>
+
+
+    <script src="withdraw.js"></script>
+</body>
+</html>
